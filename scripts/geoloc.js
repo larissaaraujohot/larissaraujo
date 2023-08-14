@@ -1,5 +1,5 @@
 function getGeolocationByIP() {
-    const url = 'http://ip-api.com/json/?fields=city';
+    const url = 'https://ipapi.co/json/';
 
     fetch(url)
         .then(response => response.json())
