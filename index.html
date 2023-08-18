@@ -50,7 +50,7 @@
             </ul>
         </section>
         <section class="profile-cta">
-            <a class="btn btn-block btn-red" href="https://allmylinks.com/link/out?id=wmsppf-28bf6-zujom0">
+            <a class="btn btn-block btn-red" id="cta" href="https://allmylinks.com/link/out?id=wmsppf-28bf6-zujom0">
                 <i class="fa-brands fa-whatsapp fa-bounce"></i>
                 Clique aqui para virar cliente 
             </a>
@@ -73,5 +73,13 @@
         -->
     </div>
     <script src="./scripts/geoloc.js"></script>
+    <script>
+        document.getElementById('cta').addEventListener('click', function() {
+            fbq('track', 'Purchase', {
+                value: 30.00, // Valor da compra
+                currency: 'BRL' // Moeda da compra (exemplo: BRL para Real Brasileiro)
+            });
+        });
+    </script>
 </body>
 </html>
