@@ -75,9 +75,10 @@
     <script src="./scripts/geoloc.js"></script>
     <script>
         document.getElementById('cta').addEventListener('click', function() {
-            fbq('track', 'Purchase', {
-                value: 30.00, // Valor da compra
-                currency: 'BRL' // Moeda da compra (exemplo: BRL para Real Brasileiro)
+            fbq('track', 'InitiateCheckout', {
+                content_type: 'product',
+                value: 30.00,
+                currency: 'BRL'
             });
         });
     </script>
